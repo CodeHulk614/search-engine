@@ -1,26 +1,14 @@
 import React from "react";
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import CardGroup from 'react-bootstrap/CardGroup';
 function Cards(props){
     return(
-        <CardGroup>
-      <Card>
-        <Card.Img variant="top" src={props.schoolImg} />
-        <Card.Body>
-          <Card.Title>{props.schoolName}</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">{props.aboutSchool}</small>
-        </Card.Footer>
-      </Card>
-    </CardGroup>
-        
-        
+        <div className="card rounded-0">
+          <img src={props.schoolImg} className="card-img-top rounded-0" alt="..."></img>
+          <div className="card-body">
+            <h5 className="card-title m-0 mb-1">{props.schoolName}</h5>
+            <p className="card-text m-0 mb-1">{props.aboutSchool}</p>
+            <a href="test" class="btn btn-primary">Go somewhere</a>
+          </div>
+      </div>
     )
 }
 export default Cards
